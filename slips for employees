@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main() {
+    int n, i;
+    float basic, hra, da, pf, gross, net;
+
+    printf("Enter number of employees: ");
+    scanf("%d", &n);
+
+    for(i = 1; i <= n; i++) {
+        printf("\nEmployee %d\n", i);
+
+        printf("Enter Basic Salary: ");
+        scanf("%f", &basic);
+
+        hra = basic * 0.20;   
+        da  = basic * 0.10; 
+        pf  = basic * 0.12; 
+
+        gross = basic + hra + da;
+        net = gross - pf;
+
+        printf("\n--- Salary Slip ---\n");
+        printf("Basic Salary : %.2f\n", basic);
+        printf("HRA (20%%)    : %.2f\n", hra);
+        printf("DA (10%%)     : %.2f\n", da);
+        printf("PF (12%%)     : %.2f\n", pf);
+        printf("Gross Salary : %.2f\n", gross);
+        printf("Net Salary   : %.2f\n", net);
+    }
+
+    return 0;
+}
