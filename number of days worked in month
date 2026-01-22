@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    int totalDays, startDay;
+    int workedDays = 0;
+
+    printf("Enter total number of days in the month: ");
+    scanf("%d", &totalDays);
+
+    printf("Enter the day number of the 1st day of the month (1-7): ");
+    scanf("%d", &startDay);
+
+    for(int i = 1; i <= totalDays; i++) {
+        if(startDay >= 1 && startDay <= 5) {
+            workedDays++;
+        }
+
+        startDay++;
+        if(startDay > 7) {
+            startDay = 1;
+        }
+    }
+
+    printf("Number of days worked in the month: %d", workedDays);
+
+    return 0;
+}
