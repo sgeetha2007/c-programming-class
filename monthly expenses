@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    int n, i;
+    float expense[50], total = 0;
+    char items[50][30];
+
+    printf("Enter number of expense items: ");
+    scanf("%d", &n);
+
+    for(i = 0; i < n; i++) {
+        printf("\nEnter name of expense item %d: ", i + 1);
+        scanf("%s", items[i]);
+
+        printf("Enter amount for %s: ", items[i]);
+        scanf("%f", &expense[i]);
+
+        total += expense[i];  
+    }
+
+    printf("\n--- Monthly Expenses Report ---\n");
+    for(i = 0; i < n; i++) {
+        printf("%s: %.2f\n", items[i], expense[i]);
+    }
+    printf("Total Monthly Expenses = %.2f\n", total);
+
+    return 0;
+}
