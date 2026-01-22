@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+    int n, i;
+    char names[50][30];  
+    int marks[50];
+    int highestMarks = 0, topperIndex = 0;
+
+    printf("Enter number of students: ");
+    scanf("%d", &n);
+
+    for(i = 0; i < n; i++) {
+        printf("\nEnter name of student %d: ", i + 1);
+        scanf("%s", names[i]);
+
+        printf("Enter marks of %s: ", names[i]);
+        scanf("%d", &marks[i]);
+
+        if(marks[i] > highestMarks) {
+            highestMarks = marks[i];
+            topperIndex = i;
+        }
+    }
+
+    printf("\nTopper of the class:\n");
+    printf("Name: %s\n", names[topperIndex]);
+    printf("Marks: %d\n", highestMarks);
+
+    return 0;
+}
