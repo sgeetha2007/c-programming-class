@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+struct Mobile {
+    int modelNo;
+    char brand[20];
+    float price;
+};
+
+int main() {
+    struct Mobile m;
+
+    printf("Enter model no: ");
+    scanf("%d", &m.modelNo);
+
+    printf("Enter brand: ");
+    scanf("%s", m.brand);
+
+    printf("Enter price: ");
+    scanf("%f", &m.price);
+
+    printf("\nMobile Details\n");
+    printf("Model No: %d\nBrand: %s\nPrice: %.2f",
+           m.modelNo, m.brand, m.price);
+
+    return 0;
+}
