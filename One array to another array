@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    int n, i;
+    int a[50], b[50];
+
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+
+    printf("Enter elements of first array:\n");
+    for(i = 0; i < n; i++) {
+        scanf("%d", &a[i]);
+        b[i] = a[i];   
+    }
+
+    printf("\nFirst Array:\n");
+    for(i = 0; i < n; i++) {
+        printf("%d ", a[i]);
+    }
+
+    printf("\nSecond Array:\n");
+    for(i = 0; i < n; i++) {
+        printf("%d ", b[i]);
+    }
+
+    return 0;
+}
